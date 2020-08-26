@@ -4,13 +4,13 @@ import Map from './components/Map';
 
 function App() {
   const location = {
-    address: '1 Main St, Huntington Beach, CA',
-    lat: 33.653198,
-    lng: -118.006142
+    address: '555 Hahaione St, Honolulu, HI',
+    lat: 21.295730,
+    lng: -157.707370
   };
   return (
     <>
-    <Map location={location}/>
+    <Map location={location} zoomLevel={8}/>
     </>
   );
 }
