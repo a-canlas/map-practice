@@ -17,7 +17,17 @@ class MapContainer extends React.Component {
         { latitude: 33.732290, longitude: -117.991650}
       ]
     };
+    this.placeMarkers = this.placeMarkers.bind(this);
   }
+
+  placeMarkers() {
+    const results = [...this.state.results];
+    const markers = results.map((marker, index) => {
+      return <Marker key={index} position={{ lat: marker.latitude, lng: marker.longitude}} />
+    });
+    return markers;
+  }
+
   render() {
     return (
       <Map
@@ -26,7 +36,7 @@ class MapContainer extends React.Component {
         style={mapStyles}
         initialCenter={{ lat: 33.759174, lng: -117.989708 }}
       >
-
+        {this.placeMarkers()}
       </Map>
     );
   }
