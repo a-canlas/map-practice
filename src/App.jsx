@@ -1,18 +1,14 @@
 import React from 'react';
-import './App.css';
-import Map from './components/Map';
+import MapContainer from './components/MapContainer';
 
-function App() {
-  const location = {
-    address: '1 Main St, Huntington Beach, CA',
-    lat: 33.653198,
-    lng: -118.006142
-  };
-  return (
-    <>
-    <Map location={location}/>
-    </>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <>
+        <MapContainer />
+      </>
+    );
+  }
 }
 
 export default App;
