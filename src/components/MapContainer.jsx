@@ -8,15 +8,25 @@ const mapStyles = {
 };
 
 class MapContainer extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      results: [
+        { latitude: 33.796070, longitude: -118.123350},
+        { latitude: 33.714670, longitude: -117.980590},
+        { latitude: 33.732290, longitude: -117.991650}
+      ]
+    };
+  }
   render() {
     return (
       <Map
         google={this.props.google}
-        zoom={8}
+        zoom={11}
         style={mapStyles}
-        initialCenter={{ lat: 21.295730, lng: -157.707370 }}
+        initialCenter={{ lat: 33.759174, lng: -117.989708 }}
       >
-        <Marker position={{ lat: 21.295730, lng: -157.707370 }} />
+
       </Map>
     );
   }
